@@ -1,0 +1,24 @@
+    ✅[1] Fix Increment Letters Functionality
+            The current implementation of the "Increment Letters" feature is not functioning as expected.
+
+    ✅[2] Implement LogIn Feature
+            Develop a new user registration (signup) feature to allow users to create accounts. 
+
+    ✅[3] Add Edit Details Feature
+            Ensure changes are securely saved and validated.
+
+    ✅[4] Develop Show Details Feature
+            Implement a feature to display user account details in a clear and organized manner. 
+
+    ✅[5] Implement Remove Account Feature
+            Add functionality to allow users to delete their accounts permanently. 
+
+
+     Bugs to fix:
+     [1] Error account number does not exist (LogIn section).
+     [2] Infinite Loop in logIn() Function
+     [3] Improper Recursive Call in main()
+     [4] Incorrect Deposit/withdraw operation  
+     [5] Logical Error in Menu Loop Condition
+     [6] Non-Updated idNumber in signUp() Method
+     [7] Incorrect PIN Length Check in pinCheck()

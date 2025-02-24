@@ -1,0 +1,91 @@
+ Advanced Encapsulation – Secure Online Banking System
+
+check if done: ✅
+
+Introduction
+Encapsulation is a key principle of Object-Oriented Programming (OOP) that ensures data security by restricting direct access to an object's attributes and exposing only controlled methods. In an online banking system, protecting user data is crucial to prevent unauthorized access and maintain financial integrity.
+
+Problem Description
+A bank is developing a secure online banking system that manages customer accounts while enforcing strict data protection policies. Each account must follow encapsulation principles to safeguard user data from unauthorized access.
+
+Each BankAccount must include the following attributes:
+
+✅accountNumber (String): A unique identifier for the account.
+✅accountHolder (String): The name of the account owner.
+✅balance (double): The current amount in the account (must not be directly accessible).
+✅pinCode (String): A 4-digit security PIN to authenticate transactions.
+The system enforces the following rules using encapsulation:
+
+✅The balance must be private and accessible only through secure methods.
+
+✅withdraw(): Allows withdrawals only if:
+    The withdrawal amount does not exceed the available balance.
+    The correct PIN is provided for authentication.
+
+✅deposit(): Allows deposits only if:
+    The amount is positive.
+    The correct PIN is provided for authentication.
+
+getBalance(): Allows users to check their balance only if they provide the correct PIN.
+getAccountDetails(): Returns account details (except for the balance and PIN).
+changePin(): Allows users to update their PIN securely after providing the correct old PIN.
+Additionally, implement a Bank class to manage multiple bank accounts. It should:
+
+Allow account creation with a unique accountNumber.
+Provide a method to search for an account using the accountNumber.
+Securely handle deposits, withdrawals, and PIN authentication.
+Your task is to implement the BankAccount and Bank classes while ensuring all security measures are properly enforced.
+
+Input & Output Example:
+Input (Method Calls in Main Method)
+
+Bank myBank = new Bank();
+myBank.createAccount("123456", "Juan Dela Cruz", 5000.0, "4321");
+myBank.createAccount("789012", "Maria Santos", 10000.0, "5678");
+
+BankAccount account = myBank.getAccount("123456");
+
+// Attempting transactions
+account.deposit(2000.0, "4321");  
+account.withdraw(1000.0, "4321");  
+account.withdraw(7000.0, "4321");  // Should print an error message (insufficient funds)
+account.deposit(-500.0, "4321");   // Should print an error message (invalid deposit)
+account.withdraw(500.0, "0000");   // Should print an error message (incorrect PIN)
+
+// Checking account details and balance
+System.out.println(account.getAccountDetails());
+System.out.println("Current Balance: " + account.getBalance("4321"));
+
+// Changing PIN
+account.changePin("4321", "9876");  
+System.out.println("PIN changed successfully.");
+
+// Attempting withdrawal with old PIN (should fail)
+account.withdraw(500.0, "4321");
+
+// Attempting withdrawal with new PIN (should succeed)
+account.withdraw(500.0, "9876");
+Expected Output
+yaml
+Copy
+Edit
+Deposit successful! New balance: 7000.0  
+✅Withdrawal successful! New balance: 6000.0  
+✅Error: Insufficient funds!  
+✅Error: Deposit amount must be positive!  
+✅Error: Incorrect PIN!  
+Account Number: 123456  
+Account Holder: Juan Dela Cruz  
+Current Balance: 6000.0  
+PIN changed successfully.  
+Error: Incorrect PIN!  
+Withdrawal successful! New balance: 5500.0  
+
+
+Expected Results: 
+1. Encapsulation: All attributes should be private, with only controlled access through getter and setter methods.
+
+2. Security: PIN verification should be required for sensitive operations.
+
+3. Data Integrity: Withdrawals and deposits should follow strict validation rules.
+Modularity: A separate Bank class should handle account management.
