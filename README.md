@@ -4,30 +4,30 @@ This project serves as a practical exercise to enhance my skills and deepen my u
 # Project Features
 User Account Management
 
-Create a new account
-Log in with secure authentication
-Remove or delete an existing account
-Edit personal information
-Security & Authentication
+1. Create a new account
+- Log in with secure authentication
+- Remove or delete an existing account
+- Edit personal information
+- Security & Authentication
 
-Strong authentication mechanism for login
-PIN validation with length and format checks
-Prevention of unauthorized access
-Secure storage of user credentials
-Banking Operations
+2. Strong authentication mechanism for login
+- PIN validation with length and format checks
+- Prevention of unauthorized access
+- Secure storage of user credentials
+- Banking Operations
 
-Deposit funds into an account
-Withdraw funds with balance validation
-Check account balance
-Error Handling & Data Validation
+3. Deposit funds into an account
+- Withdraw funds with balance validation
+- Check account balance
+- Error Handling & Data Validation
 
-Ensures account numbers exist before login
-Prevents infinite loops in login attempts
-Validates input fields (account number, PIN, deposits, withdrawals)
-Encapsulation & Code Structure
+4. Ensures account numbers exist before login
+- Prevents infinite loops in login attempts
+- Validates input fields (account number, PIN, deposits, withdrawals)
+- Encapsulation & Code Structure
 
-Uses encapsulation principles for better data protection
-Organized and modular code for maintainability
+5. Uses encapsulation principles for better data protection
+- Organized and modular code for maintainability
 
 
 
